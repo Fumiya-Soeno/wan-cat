@@ -1,0 +1,6 @@
+framework module Pods_wan_cat {
+  umbrella header "Pods-wan-cat-umbrella.h"
+
+  export *
+  module * { export * }
+}

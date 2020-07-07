@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320A796924B43F4A00DB45E3 /* RealmSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320A796824B43F4A00DB45E3 /* RealmSwift.swift */; };
 		32664E2424B32FFB00208EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32664E2324B32FFB00208EF7 /* AppDelegate.swift */; };
 		32664E2624B32FFB00208EF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32664E2524B32FFB00208EF7 /* SceneDelegate.swift */; };
 		32664E2B24B32FFB00208EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32664E2924B32FFB00208EF7 /* Main.storyboard */; };
@@ -14,9 +15,11 @@
 		32664E3024B32FFD00208EF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32664E2E24B32FFD00208EF7 /* LaunchScreen.storyboard */; };
 		32664E3B24B3588100208EF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32664E2724B32FFB00208EF7 /* ViewController.swift */; };
 		32664E3F24B35D7C00208EF7 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32664E3E24B35D7C00208EF7 /* NextViewController.swift */; };
+		93EBC38A2F0AE4286833113C /* Pods_wan_cat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB1327AA3956AB8FACD2CD6 /* Pods_wan_cat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		320A796824B43F4A00DB45E3 /* RealmSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSwift.swift; sourceTree = "<group>"; };
 		32664E2024B32FFB00208EF7 /* wan-cat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wan-cat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32664E2324B32FFB00208EF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32664E2524B32FFB00208EF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,9 @@
 		32664E2F24B32FFD00208EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32664E3124B32FFD00208EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32664E3E24B35D7C00208EF7 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		5C6BA5950223953BA8B9AB60 /* Pods-wan-cat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wan-cat.release.xcconfig"; path = "Target Support Files/Pods-wan-cat/Pods-wan-cat.release.xcconfig"; sourceTree = "<group>"; };
+		D9AF6AE9A5406D53CEC3C180 /* Pods-wan-cat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wan-cat.debug.xcconfig"; path = "Target Support Files/Pods-wan-cat/Pods-wan-cat.debug.xcconfig"; sourceTree = "<group>"; };
+		ECB1327AA3956AB8FACD2CD6 /* Pods_wan_cat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wan_cat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93EBC38A2F0AE4286833113C /* Pods_wan_cat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +51,8 @@
 			children = (
 				32664E2224B32FFB00208EF7 /* wan-cat */,
 				32664E2124B32FFB00208EF7 /* Products */,
+				4F2C878826C5AD268A7EFF49 /* Pods */,
+				F2B09EF9F713FDBBB3C9ECF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +70,7 @@
 				32664E2324B32FFB00208EF7 /* AppDelegate.swift */,
 				32664E2524B32FFB00208EF7 /* SceneDelegate.swift */,
 				32664E2724B32FFB00208EF7 /* ViewController.swift */,
+				320A796824B43F4A00DB45E3 /* RealmSwift.swift */,
 				32664E2924B32FFB00208EF7 /* Main.storyboard */,
 				32664E3E24B35D7C00208EF7 /* NextViewController.swift */,
 				32664E2C24B32FFD00208EF7 /* Assets.xcassets */,
@@ -70,6 +80,23 @@
 			path = "wan-cat";
 			sourceTree = "<group>";
 		};
+		4F2C878826C5AD268A7EFF49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9AF6AE9A5406D53CEC3C180 /* Pods-wan-cat.debug.xcconfig */,
+				5C6BA5950223953BA8B9AB60 /* Pods-wan-cat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F2B09EF9F713FDBBB3C9ECF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECB1327AA3956AB8FACD2CD6 /* Pods_wan_cat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32664E3424B32FFD00208EF7 /* Build configuration list for PBXNativeTarget "wan-cat" */;
 			buildPhases = (
+				01751CA096BDD36E2AE378A5 /* [CP] Check Pods Manifest.lock */,
 				32664E1C24B32FFB00208EF7 /* Sources */,
 				32664E1D24B32FFB00208EF7 /* Frameworks */,
 				32664E1E24B32FFB00208EF7 /* Resources */,
+				45727D2532D1FE7574FE56EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +165,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01751CA096BDD36E2AE378A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wan-cat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45727D2532D1FE7574FE56EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wan-cat/Pods-wan-cat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wan-cat/Pods-wan-cat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wan-cat/Pods-wan-cat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		32664E1C24B32FFB00208EF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -145,6 +216,7 @@
 				32664E3F24B35D7C00208EF7 /* NextViewController.swift in Sources */,
 				32664E2424B32FFB00208EF7 /* AppDelegate.swift in Sources */,
 				32664E2624B32FFB00208EF7 /* SceneDelegate.swift in Sources */,
+				320A796924B43F4A00DB45E3 /* RealmSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +358,7 @@
 		};
 		32664E3524B32FFD00208EF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9AF6AE9A5406D53CEC3C180 /* Pods-wan-cat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +377,7 @@
 		};
 		32664E3624B32FFD00208EF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C6BA5950223953BA8B9AB60 /* Pods-wan-cat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
