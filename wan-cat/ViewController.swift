@@ -17,12 +17,15 @@ class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizer
                 target: self,
                 action: #selector(ViewController.tapped_window(_:)))
             
-            // デリゲートをセット
             tapGesture.delegate = self
             
             self.view.addGestureRecognizer(tapGesture)
-        
-            textView.text = "あああああ"
+            let realm = try! Realm()
+            let formatter = DateFormatter()
+            formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "ydMMM", options: 0, locale: Locale(identifier: "ja_JP"))
+            for num in realm.objects(Tweet.self){
+                textView.text.append("\n\(formatter.string(from: num.createdAt)) \(num.body)")
+            }
             label.text = "どっち?"
             buttonCat.setTitle("🐱", for: .normal)
             buttonDog.setTitle("🐶", for: .normal)
@@ -33,13 +36,21 @@ class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizer
         }
 
     @IBAction func closeTextField(_ sender: UITextField) {
-        textView.text = sender.text
+        let realm = try! Realm()
+        let tweet: Tweet = Tweet.create(realm: realm)
+        guard let body = sender.text else { return }
+        tweet.body = body
+        try! realm.write() {
+            realm.add(tweet)
+        }
+        print(realm.objects(Tweet.self))
+        for num in realm.objects(Tweet.self){
+            textView.text.append(num.body)
+        }
     }
     
     @objc func tapped_window(_ sender: UITapGestureRecognizer){
         if sender.state == .ended {
-            print("タップ")
-            textView.text = inputText.text
             inputText.endEditing(true)
         }
     }
@@ -68,9 +79,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizer
         tapped(model: buttonDog.currentTitle, count: &dogCount)
         
         let realm = try! Realm()
-        let results = realm.objects(Human.self).filter("name == '田中'")
+        let human = realm.objects(Human.self).filter("name == '田中'")
+        let tweet = realm.objects(Tweet.self)
         try! realm.write {
-            realm.delete(results)
+            realm.delete(human)
+            realm.delete(tweet)
         }
         for num in realm.objects(Human.self){
             print(num)
