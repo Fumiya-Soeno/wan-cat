@@ -43,10 +43,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizer
         try! realm.write() {
             realm.add(tweet)
         }
-        print(realm.objects(Tweet.self))
-        for num in realm.objects(Tweet.self){
-            textView.text.append(num.body)
-        }
+        let formatter = DateFormatter()
+        formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "ydMMM", options: 0, locale: Locale(identifier: "ja_JP"))
+        textView.text.append("\n\(formatter.string(from: tweet.createdAt)) \(tweet.body)")
+        inputText.text = ""
     }
     
     @objc func tapped_window(_ sender: UITapGestureRecognizer){
@@ -63,17 +63,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizer
     }
     @IBAction func tapCat(_ sender: Any) {
         tapped(model: buttonCat.currentTitle, count: &catCount)
-        let realm = try! Realm()
-        let human = Human()
-        human.name = "田中"
-        human.age  = 23
-        human.sex  = "MALE"
-        try! realm.write() {
-            realm.add(human)
-        }
-        for num in realm.objects(Human.self){
-            print(num)
-        }
     }
     @IBAction func tapDog(_ sender: Any) {
         tapped(model: buttonDog.currentTitle, count: &dogCount)
@@ -81,6 +70,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizer
         let realm = try! Realm()
         let human = realm.objects(Human.self).filter("name == '田中'")
         let tweet = realm.objects(Tweet.self)
+        textView.text = "ツイートが表示されます"
         try! realm.write {
             realm.delete(human)
             realm.delete(tweet)
