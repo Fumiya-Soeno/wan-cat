@@ -49,6 +49,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="closeTextField:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="s0a-CA-Ob1"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Ca1-Zf-kcv"/>
                                 </connections>
                             </textField>
@@ -76,6 +77,7 @@
                     <connections>
                         <outlet property="buttonCat" destination="wPf-OW-aqY" id="Kiu-Gc-wH9"/>
                         <outlet property="buttonDog" destination="HPC-fm-FET" id="KCu-rq-NyN"/>
+                        <outlet property="inputText" destination="DfN-Kg-1op" id="P0T-xc-Deb"/>
                         <outlet property="label" destination="7bE-4y-LCu" id="c5B-qh-w9l"/>
                         <outlet property="textView" destination="SOm-Ab-vpF" id="Keb-D7-QPU"/>
                     </connections>

@@ -1,17 +1,27 @@
 import UIKit
 import RealmSwift
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
     var catCount = 0
     var dogCount = 0
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var buttonCat: UIButton!
     @IBOutlet weak var buttonDog: UIButton!
     @IBOutlet weak var textView: UITextView!
-    
+    @IBOutlet weak var inputText: UITextField!
     
     override func viewDidLoad() {
             super.viewDidLoad()
+        
+            let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(
+                target: self,
+                action: #selector(ViewController.tapped_window(_:)))
+            
+            // デリゲートをセット
+            tapGesture.delegate = self
+            
+            self.view.addGestureRecognizer(tapGesture)
+        
             textView.text = "あああああ"
             label.text = "どっち?"
             buttonCat.setTitle("🐱", for: .normal)
@@ -21,12 +31,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
             buttonCat.titleLabel?.font = buttonSize
             buttonDog.titleLabel?.font = buttonSize
         }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textView.text = textField.text
-        textField.resignFirstResponder()
-        return true
+
+    @IBAction func closeTextField(_ sender: UITextField) {
+        textView.text = sender.text
     }
+    
+    @objc func tapped_window(_ sender: UITapGestureRecognizer){
+        if sender.state == .ended {
+            print("タップ")
+            textView.text = inputText.text
+            inputText.endEditing(true)
+        }
+    }
+    
     
     func tapped(model: Optional<String>, count: inout Int){
         guard let unwrapped = model else { return }
