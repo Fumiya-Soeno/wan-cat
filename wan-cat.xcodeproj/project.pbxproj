@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		320A796924B43F4A00DB45E3 /* RealmSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320A796824B43F4A00DB45E3 /* RealmSwift.swift */; };
+		3256EAEB24B7F8EE0062430E /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3256EAE824B7F8EE0062430E /* Font Awesome 5 Brands-Regular-400.otf */; };
+		3256EAEC24B7F8EE0062430E /* Font Awesome 5 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3256EAE924B7F8EE0062430E /* Font Awesome 5 Free-Regular-400.otf */; };
+		3256EAED24B7F8EE0062430E /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3256EAEA24B7F8EE0062430E /* Font Awesome 5 Free-Solid-900.otf */; };
 		32664E2424B32FFB00208EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32664E2324B32FFB00208EF7 /* AppDelegate.swift */; };
 		32664E2624B32FFB00208EF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32664E2524B32FFB00208EF7 /* SceneDelegate.swift */; };
 		32664E2B24B32FFB00208EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32664E2924B32FFB00208EF7 /* Main.storyboard */; };
@@ -15,11 +18,15 @@
 		32664E3024B32FFD00208EF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32664E2E24B32FFD00208EF7 /* LaunchScreen.storyboard */; };
 		32664E3B24B3588100208EF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32664E2724B32FFB00208EF7 /* ViewController.swift */; };
 		32664E3F24B35D7C00208EF7 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32664E3E24B35D7C00208EF7 /* NextViewController.swift */; };
+		32A6C12924B7FFC600A9B10D /* UIColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6C12824B7FFC600A9B10D /* UIColorHex.swift */; };
 		93EBC38A2F0AE4286833113C /* Pods_wan_cat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB1327AA3956AB8FACD2CD6 /* Pods_wan_cat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		320A796824B43F4A00DB45E3 /* RealmSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSwift.swift; sourceTree = "<group>"; };
+		3256EAE824B7F8EE0062430E /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
+		3256EAE924B7F8EE0062430E /* Font Awesome 5 Free-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Regular-400.otf"; sourceTree = "<group>"; };
+		3256EAEA24B7F8EE0062430E /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
 		32664E2024B32FFB00208EF7 /* wan-cat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wan-cat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32664E2324B32FFB00208EF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32664E2524B32FFB00208EF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +36,7 @@
 		32664E2F24B32FFD00208EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32664E3124B32FFD00208EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32664E3E24B35D7C00208EF7 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		32A6C12824B7FFC600A9B10D /* UIColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorHex.swift; sourceTree = "<group>"; };
 		5C6BA5950223953BA8B9AB60 /* Pods-wan-cat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wan-cat.release.xcconfig"; path = "Target Support Files/Pods-wan-cat/Pods-wan-cat.release.xcconfig"; sourceTree = "<group>"; };
 		D9AF6AE9A5406D53CEC3C180 /* Pods-wan-cat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wan-cat.debug.xcconfig"; path = "Target Support Files/Pods-wan-cat/Pods-wan-cat.debug.xcconfig"; sourceTree = "<group>"; };
 		ECB1327AA3956AB8FACD2CD6 /* Pods_wan_cat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wan_cat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +78,11 @@
 				32664E2324B32FFB00208EF7 /* AppDelegate.swift */,
 				32664E2524B32FFB00208EF7 /* SceneDelegate.swift */,
 				32664E2724B32FFB00208EF7 /* ViewController.swift */,
+				32A6C12824B7FFC600A9B10D /* UIColorHex.swift */,
 				320A796824B43F4A00DB45E3 /* RealmSwift.swift */,
+				3256EAE824B7F8EE0062430E /* Font Awesome 5 Brands-Regular-400.otf */,
+				3256EAE924B7F8EE0062430E /* Font Awesome 5 Free-Regular-400.otf */,
+				3256EAEA24B7F8EE0062430E /* Font Awesome 5 Free-Solid-900.otf */,
 				32664E2924B32FFB00208EF7 /* Main.storyboard */,
 				32664E3E24B35D7C00208EF7 /* NextViewController.swift */,
 				32664E2C24B32FFD00208EF7 /* Assets.xcassets */,
@@ -160,6 +172,9 @@
 				32664E3024B32FFD00208EF7 /* LaunchScreen.storyboard in Resources */,
 				32664E2D24B32FFD00208EF7 /* Assets.xcassets in Resources */,
 				32664E2B24B32FFB00208EF7 /* Main.storyboard in Resources */,
+				3256EAED24B7F8EE0062430E /* Font Awesome 5 Free-Solid-900.otf in Resources */,
+				3256EAEB24B7F8EE0062430E /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
+				3256EAEC24B7F8EE0062430E /* Font Awesome 5 Free-Regular-400.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +230,7 @@
 				32664E3B24B3588100208EF7 /* ViewController.swift in Sources */,
 				32664E3F24B35D7C00208EF7 /* NextViewController.swift in Sources */,
 				32664E2424B32FFB00208EF7 /* AppDelegate.swift in Sources */,
+				32A6C12924B7FFC600A9B10D /* UIColorHex.swift in Sources */,
 				32664E2624B32FFB00208EF7 /* SceneDelegate.swift in Sources */,
 				320A796924B43F4A00DB45E3 /* RealmSwift.swift in Sources */,
 			);

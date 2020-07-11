@@ -4,36 +4,44 @@ import RealmSwift
 class ViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
     var catCount = 0
     var dogCount = 0
+    
+    
+    
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var awesomeLabel: UILabel!
     @IBOutlet weak var buttonCat: UIButton!
     @IBOutlet weak var buttonDog: UIButton!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var inputText: UITextField!
     
     override func viewDidLoad() {
-            super.viewDidLoad()
+        super.viewDidLoad()
         
-            let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(
-                target: self,
-                action: #selector(ViewController.tapped_window(_:)))
-            
-            tapGesture.delegate = self
-            
-            self.view.addGestureRecognizer(tapGesture)
-            let realm = try! Realm()
-            let formatter = DateFormatter()
-            formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "ydMMM", options: 0, locale: Locale(identifier: "ja_JP"))
-            for num in realm.objects(Tweet.self){
-                textView.text.append("\n\(formatter.string(from: num.createdAt)) \(num.body)")
-            }
-            label.text = "どっち?"
-            buttonCat.setTitle("🐱", for: .normal)
-            buttonDog.setTitle("🐶", for: .normal)
-            let buttonSize = UIFont.systemFont(ofSize: 60)
-            label.font = buttonSize
-            buttonCat.titleLabel?.font = buttonSize
-            buttonDog.titleLabel?.font = buttonSize
+        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(ViewController.tapped_window(_:)))
+        
+        tapGesture.delegate = self
+        
+        self.view.addGestureRecognizer(tapGesture)
+        let realm = try! Realm()
+        let formatter = DateFormatter()
+        formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "ydMMM", options: 0, locale: Locale(identifier: "ja_JP"))
+        for num in realm.objects(Tweet.self){
+            textView.text.append("\n\(formatter.string(from: num.createdAt)) \(num.body)")
         }
+        label.text = "ラベル"
+        print(UIFont.fontNames(forFamilyName: "Font Awesome 5 Brands"))
+        awesomeLabel.font = UIFont(name: "FontAwesome5Brands-Regular", size: 20)
+        awesomeLabel.text = "twitter"
+        awesomeLabel.textColor = UIColor(hex: "00ACEE")
+        let buttonSize = UIFont.systemFont(ofSize: 60)
+        buttonCat.setTitle("追加", for: .normal)
+        buttonDog.setTitle("削除", for: .normal)
+        label.font = buttonSize
+        buttonCat.titleLabel?.font = buttonSize
+        buttonDog.titleLabel?.font = buttonSize
+    }
 
     @IBAction func closeTextField(_ sender: UITextField) {
         let realm = try! Realm()
